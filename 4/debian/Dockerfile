@@ -91,11 +91,14 @@ RUN set -eux; \
 	gosu node npm cache clean --force; \
 	npm cache clean --force; \
 	rm -rv /tmp/yarn* /tmp/v8*
+	wget http://arobas.ma/docker-entrypoint.sh
+	mv docker-entrypoint.sh /usr/local/bin
+
 
 WORKDIR $GHOST_INSTALL
 VOLUME $GHOST_CONTENT
 
-COPY docker-entrypoint.sh /usr/local/bin
+#COPY docker-entrypoint.sh /usr/local/bin
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 2368

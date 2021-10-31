@@ -95,9 +95,8 @@ RUN set -eux; \
 WORKDIR $GHOST_INSTALL
 VOLUME $GHOST_CONTENT
 
-#COPY docker-entrypoint.sh /usr/local/bin
-ADD http://arobas.ma/docker-entrypoint.sh /usr/local/bin
+COPY 4/debian/docker-entrypoint.sh /usr/local/bin
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 2368
+EXPOSE 2369
 CMD ["node", "current/index.js"]

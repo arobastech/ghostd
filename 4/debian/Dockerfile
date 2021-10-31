@@ -98,5 +98,5 @@ VOLUME $GHOST_CONTENT
 COPY 4/debian/docker-entrypoint.sh /usr/local/bin
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 2369
+EXPOSE 8080
 CMD ["node", "current/index.js"]

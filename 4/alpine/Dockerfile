@@ -66,7 +66,7 @@ RUN set -eux; \
 WORKDIR $GHOST_INSTALL
 VOLUME $GHOST_CONTENT
 
-COPY docker-entrypoint.sh /usr/local/bin
+COPY 4/alpine/docker-entrypoint.sh /usr/local/bin
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 2368

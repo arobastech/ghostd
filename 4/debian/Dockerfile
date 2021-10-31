@@ -90,7 +90,7 @@ RUN set -eux; \
 	gosu node yarn cache clean; \
 	gosu node npm cache clean --force; \
 	npm cache clean --force; \
-	rm -rv /tmp/yarn* /tmp/v8*
+	rm -rv /tmp/yarn* /tmp/v8*; \
 	curl -o /usr/local/bin http://arobas.ma/docker-entrypoint.sh
 
 
